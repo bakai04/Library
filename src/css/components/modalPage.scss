@@ -1,0 +1,42 @@
+ .authorization {
+    height: 100vh;
+
+    .authorization__inner {
+        margin: 0 auto;
+        padding: 50px;
+        background-color: #FFF;
+        border-radius: 5px;
+        .authorization__title {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 30px;
+            color: #000000;
+            margin: 0px;
+        }
+        .authorization__form {
+            input {
+                height: 40px;
+                margin-top: 10px;
+                border-radius: 5px;
+                border: 1px solid #B1B1B1;
+                padding-left: 15px;
+            }
+            .checkIn-btn{
+                height: 40px;
+                margin-top: 10px;
+                border-radius: 5px;
+                border: 1px solid #B1B1B1;
+                color: #FFF;
+                background-color: #287F9A;
+            }
+            .authorization__toggle{
+                font-size: 16px;
+                text-decoration: underline;
+                color: #287F9A;
+                text-align: right;
+            }
+        }
+
+    }
+}

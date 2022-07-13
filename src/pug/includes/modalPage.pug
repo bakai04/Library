@@ -1,0 +1,13 @@
+.authorization.d-flex.align-items-center
+    .container
+        .authorization__inner.col-5.text-align-center
+            p.authorization__title Войти
+            form.authorization__form.d-flex.flex-column(onsubmit='return false')
+                input.authorization__name(type="text" placeholder="Имя пользователя")
+                input.authorization__password(type="password" placeholder="Пароль")
+                input.authorization__password.d-none(type="password" placeholder="Повторите пароль")
+                button.checkIn-btn(type="submit") Войти
+                p.authorization__toggle регистрация
+
+
+
