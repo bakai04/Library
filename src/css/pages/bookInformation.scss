@@ -60,15 +60,11 @@
                 }
             }
 
-            .favorite {
-                -webkit-appearance: none;
-            }
-
-            .favorite:checked+.favorite-label {
+            .bookInfor__fav:checked+.bookInfor__fav-label {
                 background: url("../../assets/img/favorite-Active.svg");
             }
 
-            .favorite-label {
+            .bookInfor__fav-label {
                 width: 40px;
                 height: 40px;
                 background-size: cover;

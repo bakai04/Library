@@ -1,19 +1,28 @@
 function renderMoreInform(bookInform) {
+  const moreInformBtns = document.querySelector(".bookInfor__btns");
+ 
   const favoriteInput = document.querySelector(".bookInfor__fav");
   const cartBtn = document.querySelector(".bookInfor__cart");
   const favoriteLabel = document.querySelector(".bookInfor__fav-label");
 
-  favoriteInput.id = "fav-" + bookInform.id;
   favoriteLabel.for = "fav-" + bookInform.id;
-  console.log(favoriteLabel.for)
+  favoriteInput.id = "fav-" + bookInform.id;
   cartBtn.id = "cart-" + bookInform.id;
   favoriteInput.checked = bookInform.isFavorite;
+  // moreInformBtns.innerHTML = `
+  // <button class="open-editPage-btn">Редактировать</button>
+  // <input class="bookInfor__fav d-none" id="b-fav-${
+  //   bookInform.id
+  // }" type="checkbox" ${bookInform.isFavorite && "checked"}></input>             
+  // <label class="bookInfor__fav-label" for="b-fav-${bookInform.id}"></label>
+  // <img class="cart bookInfor__cart" id="cart-${
+  //   bookInform.id
+  // }" src="./assets/img/cart.svg">`;
 
   for (var key in bookInform) {
     if (key !== "id" && key !== "isFavorite")
       document.querySelector(`.${key}`).textContent = bookInform[key];
   }
-  
 }
 
 async function getMoreInform(bookId) {

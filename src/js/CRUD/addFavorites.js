@@ -8,7 +8,6 @@ async function addToFavorites(id, favorite) {
     },
   });
   let result = await response.json();
-  console.log(result);
 }
 
 function onClickFavorites() {
@@ -20,6 +19,7 @@ function onClickFavorites() {
       const favorite = {
         isFavorite: element.checked,
       };
+      console.log(element.id);
       addToFavorites(bookId, favorite);
     });
   });

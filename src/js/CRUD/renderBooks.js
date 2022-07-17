@@ -17,7 +17,7 @@ function renderBooks(books) {
                   element.isFavorite ? "checked" : ""
                 } id="fav-${element.id}"></input>
                 <label for="fav-${element.id}" class="favorite-label">
-                <label> 
+                </label> 
             </div>
             <img class="cart" id="cart-${
               element.id
