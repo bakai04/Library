@@ -1,11 +1,15 @@
-.authorization.d-flex.align-items-center
+.authorization.d-flex.align-items-center.d-none
     .container
         .authorization__inner.col-5.text-align-center
-            p.authorization__title Войти
+            p.authorization__title войти
             form.authorization__form.d-flex.flex-column(onsubmit='return false')
-                input.authorization__name(type="text" placeholder="Имя пользователя")
-                input.authorization__password(type="password" placeholder="Пароль")
-                input.authorization__password.d-none(type="password" placeholder="Повторите пароль")
+                input.authorization__name(type="text" placeholder="Имя пользователя" name="name")
+                p.warning-name-error
+                input.authorization__password(type="password" placeholder="Пароль" name="password")
+                p.warning-password-error
+                input.authorization__password.d-none(type="password" placeholder="Повторите пароль" name="repeatPassword")
+                p.warning-repeatPassword-error
+                p.warning-usersData-error
                 button.checkIn-btn(type="submit") Войти
                 p.authorization__toggle регистрация
 

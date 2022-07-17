@@ -1,0 +1,16 @@
+.creatBook.d-flex.align-items-center.d-none
+    .container
+        .creatBook__inner.col-5.text-align-center
+            p.creatBook__title войти
+            form.creatBook__form.d-flex.flex-column(onsubmit='return false')
+                input.book__data(type="text" placeholder="Название" required name="name")
+                input.book__data(type="text" placeholder="Автор" required name="author")
+                input.book__data(type="number" placeholder="Год издания" name="publishYear")
+                input.book__data(type="text" placeholder="Издательство" name="publishHouse")
+                input.book__data(type="number" placeholder="Кол-во страниц" name="pagesNumber")
+                input.book__data(type="text" placeholder="Жанры" name="genres")
+                input.book__data(type="text" placeholder="Язык оригинала" name="originalLanguage")
+                button.creatBook-btn(type="submit") Сохранить
+
+
+

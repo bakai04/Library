@@ -1,0 +1,31 @@
+.header {
+    .header__inner {
+        background-color: #FFF;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 20px 10px;
+
+        p {
+            margin: 0px;
+        }
+
+        .user-name {
+            margin-left: 10px;
+        }
+
+        .header__btn {
+            height: 50px;
+            font-size: 16px;
+            border: 0px;
+            letter-spacing: 2px;
+            width: 235px;
+            color: #FFF;
+            border-radius: 5px;
+            background-color: #287F9A;
+            transition: ease 0.2s;
+            &:hover {
+                transform: scale(0.98);
+            }
+        }
+    }
+}

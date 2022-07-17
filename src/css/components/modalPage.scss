@@ -1,42 +1,79 @@
  .authorization {
-    height: 100vh;
+     position: fixed;
+     width: 100vw;
+     height: 100vh;
+     top: 0;
+     left: 0;
+     background: rgba(0, 0, 0, 0.35);
 
-    .authorization__inner {
-        margin: 0 auto;
-        padding: 50px;
-        background-color: #FFF;
-        border-radius: 5px;
-        .authorization__title {
-            font-style: normal;
-            font-weight: 700;
-            font-size: 20px;
-            line-height: 30px;
-            color: #000000;
-            margin: 0px;
-        }
-        .authorization__form {
-            input {
-                height: 40px;
-                margin-top: 10px;
-                border-radius: 5px;
-                border: 1px solid #B1B1B1;
-                padding-left: 15px;
-            }
-            .checkIn-btn{
-                height: 40px;
-                margin-top: 10px;
-                border-radius: 5px;
-                border: 1px solid #B1B1B1;
-                color: #FFF;
-                background-color: #287F9A;
-            }
-            .authorization__toggle{
-                font-size: 16px;
-                text-decoration: underline;
-                color: #287F9A;
-                text-align: right;
-            }
-        }
+     .authorization__inner {
+         animation-name: scaling;
+         animation-duration: 1s;
+         margin: 0 auto;
+         padding: 50px;
+         background-color: #FFF;
+         border-radius: 5px;
 
+         .authorization__title {
+             text-transform: capitalize;
+             font-style: normal;
+             font-weight: 700;
+             font-size: 20px;
+             line-height: 30px;
+             color: #000000;
+             margin: 0px;
+         }
+
+         .authorization__form {
+             input {
+                 height: 40px;
+                 margin-top: 10px;
+                 border-radius: 5px;
+                 border: 1px solid #B1B1B1;
+                 padding-left: 15px;
+             }
+
+             .warning-password-error,
+             .warning-name-error,
+             .warning-repeatPassword-error,
+             .warning-usersData-error {
+                 margin: 0 0 0 5px;
+                 font-size: 14px;
+                 color: red;
+             }
+
+             .checkIn-btn {
+                 height: 40px;
+                 margin-top: 10px;
+                 border-radius: 5px;
+                 border: 1px solid #B1B1B1;
+                 color: #FFF;
+                 background-color: #287F9A;
+             }
+
+             .authorization__toggle {
+                 cursor: pointer;
+                 font-size: 16px;
+                 text-decoration: underline;
+                 color: #287F9A;
+                 text-align: right;
+             }
+         }
+
+     }
+ }
+
+ .error {
+     border: 0px !important;
+     outline: 1px solid #CF4747;
+ }
+ @keyframes scaling {
+    from {
+        transform: scale(0);
     }
+
+    to {
+        transform: scale(1);
+    }
+
 }

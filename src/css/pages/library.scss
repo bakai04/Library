@@ -1,0 +1,98 @@
+.library {
+    .library__inner {
+        background-color: #FFF;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .library__title {
+            text-align: center;
+        }
+
+        .library__books {
+            padding: 20px;
+
+            .book {
+                padding: 28px 32px;
+                width: calc(50% - 7.5px);
+                min-height: 188px;
+                border-radius: 5px;
+                box-shadow: 10px 15px 10px -15px #111;
+                transition: ease 0.2s;
+
+                .book__name {
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 30px;
+                    color: #000000;
+                }
+
+                .book__author {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #000000;
+                    margin-top: 14px;
+                }
+
+                &:hover {
+                    transform: scale(1.01);
+                }
+
+                .book__btns {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 100%;
+
+                    .favorite {
+                        -webkit-appearance: none;
+                    }
+
+                    .favorite:checked+.favorite-label {
+                        background: url("../../assets/img/favorite-Active.svg");
+                    }
+
+                    .favorite-label {
+                        width: 40px;
+                        height: 40px;
+                        background-size: cover;
+                        background: url("../../assets/img/favorite.svg");
+
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+
+                    .cart {
+                        width: 40px;
+                        height: 40px;
+
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
+
+        .creat-books-btn {
+            margin: 0 auto;
+            height: 40px;
+            width: 200px;
+            border-radius: 5px;
+            border: 1px solid #287F9A;
+            padding: 0 20px;
+            color: #FFF;
+            background: #287F9A;
+            transition: ease-in-out 0.2s;
+            margin-bottom: 20px;
+
+            &:hover{
+                transform: scale(0.98);
+            }
+        }
+    }
+}

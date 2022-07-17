@@ -1,5 +1,16 @@
 extends ../sample.pug
 block content
     include ../includes/modalPage.pug
-    
+    include ../includes/header.pug
+    include ../includes/createBook.pug
+    include ../includes/bookInformation.pug
+    .library
+        .container
+            .library__inner
+                h1.library__title Список Книг
+                .library__books.d-flex.justify-content-between.flex-wrap
+                button.creat-books-btn Добавить книгу
+
+
+                
     
