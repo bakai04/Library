@@ -1,0 +1,16 @@
+.editBook.d-flex.align-items-center.d-none
+    .container
+        .editBook__inner.col-5.text-align-center
+            p.editBook__title Редактировать книгу
+            form.editBook__form.d-flex.flex-column(onsubmit="return false")
+                input.edit-book__data(type="text" placeholder="Название" required name="name")
+                input.edit-book__data(type="text" placeholder="Автор" required name="author")
+                input.edit-book__data(type="number" placeholder="Год издания" name="publishYear")
+                input.edit-book__data(type="text" placeholder="Издательство" name="publishHouse")
+                input.edit-book__data(type="number" placeholder="Кол-во страниц" name="pagesNumber")
+                input.edit-book__data(type="text" placeholder="Жанры" name="genres")
+                input.edit-book__data(type="text" placeholder="Язык оригинала" name="originalLanguage")
+                button.editBook-btn(type="submit") Сохранить
+
+
+

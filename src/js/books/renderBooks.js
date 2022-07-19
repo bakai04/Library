@@ -1,9 +1,12 @@
 import onClickFavorites from "./addFavorites.js";
-import bookInform from "./bookInform.js";
+import bookInformPage from "./bookInform.js";
+import { getBooks } from "./crud.js";
 import onClickCart from "./deleteBook.js";
 
-function renderBooks(books) {
+async function renderBooks() {
   const library = document.querySelector(".library__books");
+  library.innerHTML = ``;
+  const books = await getBooks();
   books.forEach((element) => {
     library.innerHTML += `
     <div class="book d-flex justify-content-between" id=${element.id}>
@@ -28,7 +31,7 @@ function renderBooks(books) {
   });
   onClickCart();
   onClickFavorites();
-  bookInform()
+  bookInformPage();
 }
 
 export default renderBooks;

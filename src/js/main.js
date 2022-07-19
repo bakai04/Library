@@ -1,13 +1,13 @@
 import "../css/main.scss";
-import getBooks from "./CRUD/getBooks.js";
-import modalPage from "./user/modalPage.js";
+import modalPage from "./user/authPage.js";
 import { toggleModalPage } from "./user/toggleModalPage";
-import toggleCreatBooks from "./CRUD/toggleCreatBooks.js";
-import addNewBooks from "./CRUD/addNewBooks.js";
+import {addNewBooks, toggleCreatBooks } from "./books/creatNewBook.js";
+import renderBooks from "./books/renderBooks.js";
+import userName from "./user/userName.js";
 
-
+renderBooks()
 modalPage();
 toggleModalPage();
-getBooks()
 toggleCreatBooks();
 addNewBooks();
+userName();
