@@ -7,12 +7,12 @@ async function renderMoreInform(bookId) {
   const bookData = await getMoreInform(bookId);
   moreInformBtns.innerHTML = `
       <button class="open-editPage-btn">Редактировать</button>
-      <input class="bookInfor__fav d-none" id="b-fav-${
+      <input class="bookInfor__fav d-none" id="fav-${
         bookData.id
       }" type="checkbox" ${
     bookData.isFavorite && "checked"
   }></input>             
-      <label class="bookInfor__fav-label" for="b-fav-${bookData.id}"></label>
+      <label class="bookInfor__fav-label" for="fav-${bookData.id}"></label>
       <img class="cart bookInfor__cart" id="cart-${
         bookData.id
       }" src="./assets/img/cart.svg">`;
@@ -30,7 +30,7 @@ async function renderMoreInform(bookId) {
 function informFavorite() {
   const informFavBtn = document.querySelector(".bookInfor__fav");
   informFavBtn.addEventListener("click", () => {
-    const bookId = informFavBtn.id.slice(6, informFavBtn.id.length);
+    const bookId = informFavBtn.id.slice(4, informFavBtn.id.length);
     updateBook(bookId, { isFavorite: informFavBtn.checked });
   });
 }
@@ -52,7 +52,7 @@ function bookInformPage() {
   books.forEach((element, index) => {
     element.addEventListener("click", (e) => {
       if (e.path.indexOf(bookBtns[index]) === -1) {
-        renderMoreInform(element.id);
+        renderMoreInform(element.dataset.id);
         bookInform.classList.remove("d-none");
       }
     });

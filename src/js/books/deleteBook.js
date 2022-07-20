@@ -4,8 +4,7 @@ function onClickCart() {
   
   bookCart.forEach((element) => {
     element.addEventListener("click", () => {
-      const bookId = element.id.slice(5, element.id.length);
-      deleteBook(bookId);
+      deleteBook(element.dataset.id);
     });
   });
 }

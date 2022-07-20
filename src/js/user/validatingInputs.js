@@ -32,7 +32,7 @@ const inputValidatingFunctions = {
     },
     function (value) {
       const originPas = document.querySelector(".authorization__password").value 
-      return originPas === value ? "" : "Неправильный пароль*";
+      return originPas === value ? "" : "Пароль не совпадает*";
     },
   ],
 };

@@ -7,8 +7,9 @@
                 p.warning-name-error
                 input.authorization__password(type="password" placeholder="Пароль" name="password")
                 p.warning-password-error
-                input.authorization__password.d-none(type="password" placeholder="Повторите пароль" name="repeatPassword")
-                p.warning-repeatPassword-error
+                .repeat-password.d-none
+                    input.authorization__password(type="password" placeholder="Повторите пароль" name="repeatPassword")
+                    p.warning-repeatPassword-error
                 p.warning-usersData-error
                 button.checkIn-btn(type="submit") Войти
                 p.authorization__toggle регистрация

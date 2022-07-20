@@ -1,9 +1,9 @@
-export function toggleModalPage(){
+export function toggleAuthPage(){
     const toggleModalPage = document.querySelector(".header__btn");
     const modalPage = document.querySelector(".authorization");
     const modalPageForm = document.querySelector(".authorization__inner");
 
-    toggleModalPage.addEventListener("click",()=>{
+    toggleModalPage?.addEventListener("click",()=>{
       modalPage.classList.toggle("d-none");
     })
     modalPage?.addEventListener("click", (e)=>{
