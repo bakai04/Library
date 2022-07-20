@@ -14,11 +14,14 @@
             padding: 20px;
 
             .book {
+                display: flex;
+                justify-content: space-between;
                 padding: 28px 32px;
                 width: calc(50% - 7.5px);
                 min-height: 188px;
                 border-radius: 5px;
-                box-shadow: 10px 15px 10px -15px #111;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 10px;
+                margin-bottom: 15px;
                 transition: ease 0.2s;
 
                 .book__name {

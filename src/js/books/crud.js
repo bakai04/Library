@@ -42,13 +42,13 @@ export async function updateBook(id, bookData) {
 }
 
 export async function getBooks() {
-  loader.classList.toggle("d-none");
+  // loader.classList.toggle("d-none");
   let response = await fetch("http://localhost:1717/books", {
     method: "GET",
     headers: { "X-Auth": token },
   });
   let result = await response.json();
-  loader.classList.toggle("d-none");
+  // loader.classList.toggle("d-none");
   return result;
 }
 

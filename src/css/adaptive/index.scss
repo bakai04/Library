@@ -1,0 +1,32 @@
+@media(max-width: 992px) {
+    .library {
+        .library__inner {
+            .library__books {
+                .book {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 576px) {
+    .library {
+        .library__inner {
+            .library__books {
+                padding: 10px;
+                .book {
+                    flex-direction: column;
+
+                    .book__btns {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: start;
+                        gap: 15px;
+                        height: fit-content;
+                    }
+                }
+            }
+        }
+    }
+}
