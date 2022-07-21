@@ -8,13 +8,20 @@
     background: rgba(0, 0, 0, 0.35);
 
     .editBook__inner {
+        position: relative;
+        max-width: 465px;
         animation-name: scaling;
         animation-duration: 0.6s;
         margin: 0 auto;
         padding: 50px;
         background-color: #FFF;
         border-radius: 5px;
-
+        .editBook__close{
+            position: absolute;
+            width: 20px;
+            right: 20px;
+            top: 20px;
+        }
         .editBook__title {
             text-transform: capitalize;
             font-style: normal;

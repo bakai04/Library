@@ -4,7 +4,15 @@
             .bookInfor__items {
                 flex-direction: column;
                 justify-content: start;
+
+                .bookInfor__data {
+                    font-size: 16px;
+                    p {
+                        font-size: 16px;
+                    }
+                }
             }
+
         }
     }
 }

@@ -42,6 +42,7 @@ function bookInformPage() {
   const bookInform = document.querySelector(".bookInfor");
   const bookInformInner = document.querySelector(".bookInfor__inner");
   const bookBtns = document.querySelectorAll(".book__btns");
+  const closeBtn = document.querySelector(".bookInfor__close");
 
   books.forEach((element, index) => {
     element.addEventListener("click", (e) => {
@@ -57,6 +58,9 @@ function bookInformPage() {
       bookInform.classList.add("d-none");
     }
   });
+  closeBtn.addEventListener("click", ()=>{
+    bookInform.classList.toggle("d-none");
+  })
 }
 
 export default bookInformPage;

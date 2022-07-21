@@ -1,18 +1,22 @@
 import { updateBook } from "./crud.js";
 import { getBookData } from "./creatNewBook";
 
-function toggleEditPage() {
+export function toggleEditPage() {
   const toggleBtn = document.querySelector(".open-editPage-btn");
   const editPage = document.querySelector(".editBook");
   const editPageForm = document.querySelector(".editBook__inner");
+  const closeBtn = document.querySelector(".editBook__close");
 
   toggleBtn.onclick = () => {
     editPage.classList.toggle("d-none");
   };
-  editPage?.addEventListener("click", (e)=>{
+  editPage.addEventListener("click", (e)=>{
     if(e.path.indexOf(editPageForm)===-1){
       editPage.classList.toggle("d-none");
     }
+  })
+  closeBtn.addEventListener("click", ()=>{
+    editPage.classList.toggle("d-none");
   })
 }
 
@@ -28,7 +32,6 @@ function putPreviousData(bookInform){
 function editBook(bookInform) {
   const editBookForm = document.querySelector(".editBook__form");
   const editPage = document.querySelector(".editBook");
-  toggleEditPage();
   putPreviousData(bookInform);
   
   editBookForm.addEventListener("submit", ()=>{

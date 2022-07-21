@@ -8,7 +8,7 @@
     background: rgba(0, 0, 0, 0.35);
 
     .clarifyAction__inner {
-        width: fit-content;
+        max-width: 424px;
         animation-name: scaling;
         animation-duration: 0.6s;
         margin: 0 auto;

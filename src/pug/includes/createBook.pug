@@ -1,7 +1,8 @@
 .creatBook.d-flex.align-items-center.d-none
     .container
-        .creatBook__inner.col-5.text-align-center
+        .creatBook__inner.text-align-center
             p.creatBook__title Добавить книгу
+            img.createBook__close(src="./assets/img/close.svg")
             form.creatBook__form.d-flex.flex-column(onsubmit='return false')
                 input.book__data(type="text" placeholder="Название" required name="name")
                 input.book__data(type="text" placeholder="Автор" required name="author")

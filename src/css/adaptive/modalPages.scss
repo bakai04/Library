@@ -1,0 +1,31 @@
+@media(max-width: 465px){
+    .authorization {
+        .authorization__inner {
+            padding: 30px;
+            .authorization__title {
+                font-size: 18px;
+            }
+            .authorization__form {
+                .authorization__subtitle {
+                   font-size: 16px;
+                }
+            }
+   
+        }
+    }
+    .clarifyAction {
+        .clarifyAction__inner {
+            padding: 30px;
+        }
+    }
+    .editBook {
+        .editBook__inner {
+            padding: 30px;
+        }
+    }
+    .creatBook {
+        .creatBook__inner {
+            padding: 30px;
+        }
+    }
+}

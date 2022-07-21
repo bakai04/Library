@@ -5,6 +5,7 @@ import renderBooks from "./books/renderBooks.js";
 import userName from "./user/userName.js";
 import CheckUser from "./user/CheckUser.js";
 import { informDelete, informFavorite } from "./books/bookInform.js";
+import { toggleEditPage } from "./books/editBook.js";
 
 renderBooks()
 modalPage();
@@ -14,3 +15,4 @@ addNewBooks();
 userName();
 informFavorite();
 informDelete();
+toggleEditPage();

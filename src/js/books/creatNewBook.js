@@ -4,6 +4,7 @@ export function toggleCreatBooks() {
   const toggleBookBtn = document.querySelector(".creat-books-btn");
   const creatBookPage = document.querySelector(".creatBook");
   const creatBookForm = document.querySelector(".creatBook__inner");
+  const closeBtn = document.querySelector(".createBook__close");
 
   toggleBookBtn.addEventListener("click", () => {
     creatBookPage.classList.toggle("d-none");
@@ -13,6 +14,9 @@ export function toggleCreatBooks() {
       creatBookPage.classList.toggle("d-none");
     }
   });
+  closeBtn.addEventListener("click", ()=>{
+    creatBookPage.classList.toggle("d-none");
+  })
 }
 
 export function getBookData(inputClass) {

@@ -1,4 +1,3 @@
-import renderBooks from "../books/renderBooks.js";
 export function toggleAuthPage() {
   const toggleModalPage = document.querySelector(".header__btn");
   const modalPage = document.querySelector(".authorization");

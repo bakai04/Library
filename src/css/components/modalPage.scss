@@ -9,12 +9,12 @@
 
      .authorization__inner {
          animation-name: scaling;
+         max-width: 465px;
          animation-duration: 0.6s;
          margin: 0 auto;
          padding: 50px;
          background-color: #FFF;
          border-radius: 5px;
-
          .authorization__title {
              text-transform: capitalize;
              font-style: normal;

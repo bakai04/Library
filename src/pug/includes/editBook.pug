@@ -1,6 +1,7 @@
 .editBook.d-flex.align-items-center.d-none
     .container
-        .editBook__inner.col-5.text-align-center
+        .editBook__inner.text-align-center
+            img.editBook__close(src="./assets/img/close.svg")
             p.editBook__title Редактировать книгу
             form.editBook__form.d-flex.flex-column(onsubmit="return false")
                 input.edit-book__data(type="text" placeholder="Название" required name="name")
