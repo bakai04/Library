@@ -25,10 +25,20 @@
              margin: 0px;
          }
 
+         .warning-password-error,
+         .warning-username-error,
+         .warning-repeatPassword-error,
+         .warning-usersData-error {
+             margin: 0 0 0 5px;
+             font-size: 14px;
+             color: red;
+         }
+
          .authorization__form {
-            .repeat-password{
-                width: 100%;
-            }
+             .repeat-password {
+                 width: 100%;
+             }
+
              input {
                  height: 40px;
                  margin-top: 10px;
@@ -38,14 +48,6 @@
                  width: 100%;
              }
 
-             .warning-password-error,
-             .warning-name-error,
-             .warning-repeatPassword-error,
-             .warning-usersData-error {
-                 margin: 0 0 0 5px;
-                 font-size: 14px;
-                 color: red;
-             }
 
              .checkIn-btn {
                  height: 40px;
@@ -54,6 +56,15 @@
                  border: 1px solid #B1B1B1;
                  color: #FFF;
                  background-color: #287F9A;
+             }
+
+             .authorization__subtitle {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 30px;
+                color: #000000;
+                margin: 10px 0 0px 5px;
              }
 
              .authorization__toggle {
@@ -72,13 +83,14 @@
      border: 0px !important;
      outline: 1px solid #CF4747;
  }
+
  @keyframes scaling {
-    from {
-        transform: scale(0);
-    }
+     from {
+         transform: scale(0);
+     }
 
-    to {
-        transform: scale(1);
-    }
+     to {
+         transform: scale(1);
+     }
 
-}
+ }

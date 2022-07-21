@@ -35,6 +35,7 @@ export function addNewBooks() {
   creatBookForm.addEventListener("submit", () => {
     const bookdata = getBookData(".book__data");
     creatBook(bookdata);
+    creatBookForm.reset(); 
     creatBookPage.classList.toggle("d-none");
   });
 }

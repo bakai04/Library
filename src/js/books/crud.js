@@ -9,7 +9,6 @@ export async function deleteBook(id) {
     method: "DELETE",
     headers: { "X-Auth": token },
   });
-  let result = await response.json();
   loader.classList.toggle("d-none");
   renderBooks();
 }
@@ -24,7 +23,6 @@ export async function creatBook(bookData) {
     },
     body: JSON.stringify(bookData),
   });
-  let result = await response.json();
   loader.classList.toggle("d-none");
   renderBooks();
 }
@@ -38,18 +36,17 @@ export async function updateBook(id, bookData) {
       "Content-Type": "application/json;charset=utf-8",
     },
   });
-  let result = await response.json();
 }
 
 export async function getBooks() {
-  // loader.classList.toggle("d-none");
+  loader.classList.toggle("d-none");
   let response = await fetch("http://localhost:1717/books", {
     method: "GET",
     headers: { "X-Auth": token },
   });
   let result = await response.json();
-  // loader.classList.toggle("d-none");
-  return result;
+  loader.classList.toggle("d-none");
+  return typeof result === "object" ? result: [];
 }
 
 export async function getMoreInform(bookId) {
@@ -61,4 +58,17 @@ export async function getMoreInform(bookId) {
   let result = await response.json();
   loader.classList.toggle("d-none");
   return result;
+}
+
+export async function autorization(user, mode) {
+  loader.classList.toggle("d-none");
+  let response = await fetch(`http://localhost:1717${mode}`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json;charset=utf-8" },
+    body: JSON.stringify(user),
+  }).then((el) => {
+    return el.json();
+  });
+  loader.classList.toggle("d-none");
+  return response;
 }

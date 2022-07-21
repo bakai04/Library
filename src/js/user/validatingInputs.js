@@ -1,5 +1,5 @@
 const inputValidatingFunctions = {
-  name: [
+  username: [
     function (value) {
       return value.length <= 0 ? "поле обязательно*" : "";
     },

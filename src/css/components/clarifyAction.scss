@@ -1,0 +1,41 @@
+.clarifyAction {
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.35);
+
+    .clarifyAction__inner {
+        width: fit-content;
+        animation-name: scaling;
+        animation-duration: 0.6s;
+        margin: 0 auto;
+        padding: 50px;
+        background-color: #FFF;
+        border-radius: 5px;
+
+        .clarifyAction__title {
+            text-align: center;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 30px;
+            color: #000000;
+        }
+
+        .yes,.no{
+            border: 1px solid #287F9A;
+            padding: 5px 0;
+            border-radius: 5px;
+            background-color: #FFF;
+            transition: ease-in-out 0.2s;
+            width: calc(50% - 7.5px);
+            &:hover{
+                background-color: #287F9A;
+                color: #FFF;
+            }
+        }
+    }
+}

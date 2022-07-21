@@ -26,12 +26,12 @@ function putPreviousData(bookInform){
 
 
 function editBook(bookInform) {
-  const editBookBtn = document.querySelector(".editBook-btn");
+  const editBookForm = document.querySelector(".editBook__form");
   const editPage = document.querySelector(".editBook");
   toggleEditPage();
   putPreviousData(bookInform);
   
-  editBookBtn.addEventListener("click", ()=>{
+  editBookForm.addEventListener("submit", ()=>{
     const newBookData = getBookData(".edit-book__data");
     updateBook(bookInform.id, newBookData);
     editPage.classList.toggle("d-none");

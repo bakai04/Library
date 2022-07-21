@@ -1,45 +1,39 @@
+import showClarityAction from "./clarityAction.js";
 import { getMoreInform, updateBook } from "./crud.js";
 import { deleteBook } from "./crud.js";
 import editBook from "./editBook.js";
 
 async function renderMoreInform(bookId) {
-  const moreInformBtns = document.querySelector(".bookInfor__btns");
+  const favoriteInput = document.querySelector(".bookInfor__fav");
+  const cartBtn = document.querySelector(".bookInfor__cart");
   const bookData = await getMoreInform(bookId);
-  moreInformBtns.innerHTML = `
-      <button class="open-editPage-btn">Редактировать</button>
-      <input class="bookInfor__fav d-none" id="fav-${
-        bookData.id
-      }" type="checkbox" ${
-    bookData.isFavorite && "checked"
-  }></input>             
-      <label class="bookInfor__fav-label" for="fav-${bookData.id}"></label>
-      <img class="cart bookInfor__cart" id="cart-${
-        bookData.id
-      }" src="./assets/img/cart.svg">`;
+  favoriteInput.dataset.id = bookData.id;
+  cartBtn.dataset.id = bookData.id;
+  favoriteInput.checked = bookData.isFavorite;
 
   for (var key in bookData) {
     if (key !== "id" && key !== "isFavorite")
       document.querySelector(`.${key}`).textContent = bookData[key];
   }
-
-  informFavorite();
-  informDelete();
   editBook(bookData);
 }
 
-function informFavorite() {
+export function informFavorite() {
   const informFavBtn = document.querySelector(".bookInfor__fav");
+  const cartFavorite = document.getElementById(informFavBtn.dataset.id);
   informFavBtn.addEventListener("click", () => {
-    const bookId = informFavBtn.id.slice(4, informFavBtn.id.length);
-    updateBook(bookId, { isFavorite: informFavBtn.checked });
+    cartFavorite.checked = informFavBtn.checked;
+    updateBook(informFavBtn.dataset.id, { isFavorite: informFavBtn.checked });
   });
 }
 
-function informDelete() {
+export function informDelete() {
+  const bookInform = document.querySelector(".bookInfor");
   const informDeleteBtn = document.querySelector(".bookInfor__cart");
+
   informDeleteBtn.addEventListener("click", () => {
-    const bookId = informDeleteBtn.id.slice(5, informDeleteBtn.id.length);
-    deleteBook(bookId);
+    showClarityAction(informDeleteBtn.dataset.id);
+    bookInform.classList.add("d-none");
   });
 }
 
