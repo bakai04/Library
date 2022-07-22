@@ -5,10 +5,6 @@ const CopyPlugin = require("copy-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-const PAGES_DIR = `${path.resolve(__dirname, "src")}/pug/pages/`;
-const PAGES = fs
-  .readdirSync(PAGES_DIR)
-  .filter((fileName) => fileName.endsWith(".pug"));
 
 module.exports = {
   mode: "development",
@@ -37,14 +33,10 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "style.css",
     }),
-    ...PAGES.map(
-      (page) =>
-        new HtmlWebpackPlugin({
-          template: `${PAGES_DIR}/${page}`,
-          filename: `./${page.replace(/\.pug/, ".html")}`,
-          minify: false,
-        })
-    ),
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, './src/pug/pages/index.pug'),
+      filename: 'index.html',
+    }),
   ],
 
   module: {

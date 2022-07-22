@@ -16,3 +16,17 @@
         }
     }
 }
+@media(max-width: 576px) {
+    .bookInfor {
+        .bookInfor__inner {
+            padding: 40px 30px;
+            .bookInfor__title {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 25px;
+                line-height: 30px;
+                color: #000000;
+            }
+        }
+    }
+}
